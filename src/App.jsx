@@ -8,18 +8,18 @@ import { isMobile } from 'react-device-detect';
 
 const App = () => {
 
-  const timerVariants = {
-    initial: { scaleX: 1 },
-    animate: {
-      scaleX: 1,
-      transition: {
-        duration: 5,
-        repeat: Infinity,
+  // const timerVariants = {
+  //   initial: { scaleX: 1 },
+  //   animate: {
+  //     scaleX: 1,
+  //     transition: {
+  //       duration: 5,
+  //       repeat: Infinity,
 
-      },
+  //     },
 
-    },
-  };
+  //   },
+  // };
 
   if (isMobile) {
     return <>

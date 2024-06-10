@@ -1,4 +1,4 @@
-import { motion, AnimatePresence, animate, delay } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import useCarouselStore from "../store/useCarouselStore"
 
 const Slide = () => {
