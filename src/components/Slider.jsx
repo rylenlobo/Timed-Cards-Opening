@@ -9,12 +9,12 @@ const Slider = () => {
 
   return (
     <>
-      <div className="absolute z-50 flex w-1/2 overflow-hidden right-0 bottom-24 py-10">
+      <div className="absolute bottom-32 right-0 z-50 flex w-1/2 space-x-7 rounded-md">
 
         <AnimatePresence mode="popLayout" initial={false}>
           {slidesData.map((item, index) => (
             <motion.div
-              className="relative w-48 h-72 flex-shrink-0 rounded-md overflow-hidden shadow-3xl  mx-3 "
+              className="relative h-72 w-48 flex-shrink-0 overflow-hidden rounded-md shadow-3xl"
               layout
               key={item.id}
               transition={{

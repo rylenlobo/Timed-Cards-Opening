@@ -23,7 +23,7 @@ const App = () => {
 
   if (isMobile) {
     return <>
-      <div className="h-screen gap-10 w-screen flex flex-col justify-center items-center">
+      <div className="flex h-screen w-screen flex-col items-center justify-center gap-10">
         <Computer size={50} />
         <p>Please use this on a desktop.</p>
       </div>
@@ -34,11 +34,8 @@ const App = () => {
 
   return (
     <>
-      <div className="relative h-screen w-screen overflow-hidden  bg-stone-800">
-        <div className="absolute z-50 top-0 w-full h-1">
-          {/* <motion.div style={{ originX: 0 }} variants={timerVariants} initial="initial" animate="animate" exit="exit" className="h-full bg-red-500" /> */}
-        </div>
-        <img className="absolute z-50 right-0 w-52 mt-5 brightness-90" src={dslogo} />
+      <div className="relative h-screen w-screen overflow-hidden bg-stone-800">
+        <img className="absolute right-0 z-50 mt-5 w-52 brightness-90" src={dslogo} />
         <Slide />
         <Slider />
         <NextAndProgress />

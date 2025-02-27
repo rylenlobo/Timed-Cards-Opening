@@ -6,7 +6,7 @@ const Slide = () => {
     const { slideImages } = useCarouselStore()
 
     const slidesVariants = {
-        animate: { height: "100%", width: "100%", inset: 0, margin: 0, borderRadius: 0, },
+        animate: { height: "100%", width: "100%", inset: 0,borderRadius: 0, },
         exit: { scale: 2, opacity: 0 },
     }
 
@@ -40,13 +40,13 @@ const Slide = () => {
 
     return (
         <>
-            <div>
+           
                 <AnimatePresence initial={false}>
                     {slideImages.map(item => <div key={item.img}>
                         <motion.div
                             key={item.img}
                             layout
-                            className="absolute overflow-hidden w-48 h-72 bottom-32 left-1/2 ml-3 mb-2 rounded-md "
+                            className="absolute bottom-32 left-1/2 h-72 w-48 overflow-hidden rounded-md"
                             variants={slidesVariants}
                             animate="animate"
                             exit="exit"
@@ -54,18 +54,18 @@ const Slide = () => {
                                 duration: 1,
                                 ease: "easeInOut"
                             }}>
-                            <img className="h-full w-full object-cover " src={item.img} alt="" />
+                            <img className="h-full w-full object-cover" src={item.img} alt="" />
                         </motion.div>
-                        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 0.4 }} transition={{ delay: 1 }} className="absolute h-full w-full bg-black " />
+                        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 0.4 }} transition={{ delay: 1 }} className="absolute h-full w-full bg-black" />
                         <div className="h-full w-full">
-                            <motion.div variants={containerVariants} initial="initial" animate="animate" exit="exit" className="absolute top-1/2 w-2/5 left-20 text-slate-100 overflow-hidden ">
+                            <motion.div variants={containerVariants} initial="initial" animate="animate" exit="exit" className="absolute left-20 top-1/2 w-2/5 overflow-hidden text-slate-100">
                                 <motion.p variants={textVariants} className="w-60 font-oswald text-8xl">{item.name?.toUpperCase()}</motion.p>
-                                <motion.p variants={textVariants} className="py-6 font-oswald italic text-2xl">{`"${item.quote ?? ""}"`}</motion.p>
+                                <motion.p variants={textVariants} className="py-6 font-oswald text-2xl italic">{`"${item.quote ?? ""}"`}</motion.p>
                             </motion.div>
                         </div>
                     </div>)}
                 </AnimatePresence>
-            </div>
+
         </>
     )
 }

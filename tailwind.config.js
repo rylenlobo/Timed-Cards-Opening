@@ -19,18 +19,18 @@ export default {
       xl: "1280px",
       // => @media (min-width: 1280px) { ... }
 
-      "2xl": "1536px"
+      "2xl": "1536px",
       // => @media (min-width: 1536px) { ... }
     },
     fontFamily: {
-      oswald: ["Oswald", "sans-serif"]
+      oswald: ["Oswald", "sans-serif"],
     },
     extend: {
       boxShadow: {
         "3xl":
-          "rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;"
-      }
-    }
+          "rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;",
+      },
+    },
   },
-  plugins: []
+
 };

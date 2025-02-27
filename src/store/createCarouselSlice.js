@@ -5,7 +5,7 @@ import { uid } from "uid";
 const newSlides = () => {
   return slides.map((item) => ({
     ...item,
-    id: uid()
+    id: uid(),
   }));
 };
 
@@ -26,10 +26,10 @@ export const createCarouselSlice = create((set) => ({
       return {
         ...state,
         slidesData: newSlidesData,
-        slideImages: newSlideImages
+        slideImages: newSlideImages,
       };
     });
-  }
+  },
 
   // handlePrevSlide: () =>
   //   set((state) => {
